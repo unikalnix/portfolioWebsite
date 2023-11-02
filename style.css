@@ -158,96 +158,68 @@ body {
     padding-right: 30px;
   }
 }
-/* landing page responsive*/
-@media only screen and (max-width: 320px) {
-  .landing-page {
-    width: 100%;
-    height: 455px;
-    background-image: linear-gradient(
+/* landing page responsive */
+.landing-page {
+  width: 100%;
+  background-image: linear-gradient(
       to right bottom,
       #000000,
       #1b1b1a,
       #2f2e2e,
       #444443,
       #5a5a59
-    );
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .text-span {
-    color: white;
-    text-align: center;
-  }
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.text-span {
+  color: white;
+  text-align: center;
+}
+
+.text-span > span {
+  font-size: 20px; /* Adjust the font size for larger screens */
+  text-transform: capitalize;
+}
+
+.daniyal {
+  font-size: 42px !important;
+  text-transform: capitalize;
+}
+
+#intro-text > span {
+  color: #ef961a;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
   .text-span > span {
-    font-size: 10px;
-    text-transform: capitalize;
+      font-size: 16px; /* Adjust the font size for medium-sized screens */
   }
 
   .daniyal {
-    font-size: 42px !important;
-    text-transform: capitalize;
-  }
-
-  #intro-text > span {
-    color: #ef961a;
+      font-size: 36px !important;
   }
 }
-@media only screen and (min-width: 320px) {
-  .landing-page {
-    width: 100%;
-    height: 600px;
-    background-image: linear-gradient(
-      to right bottom,
-      #000000,
-      #1b1b1a,
-      #2f2e2e,
-      #444443,
-      #5a5a59
-    );
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .text-span {
-    color: white;
-    text-align: center;
-  }
+
+@media only screen and (max-width: 480px) {
   .text-span > span {
-    font-size: 10px;
-    text-transform: capitalize;
+      font-size: 14px; /* Adjust the font size for smaller screens */
   }
 
   .daniyal {
-    font-size: 42px !important;
-    text-transform: capitalize;
+      font-size: 28px !important;
   }
+}
 
-  #intro-text > span {
-    color: #ef961a;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .landing-page {
-    height: 550px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .landing-page {
-    height: 606px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .landing-page {
-    height: 717px;
-  }
-}
 /* section 2 responsive */
 @media only screen and (max-width: 320px) {
+  
   .myPictureContainer > img {
     width: -webkit-fill-available;
   }
@@ -264,7 +236,6 @@ body {
   }
   .s2-content {
     margin: 40px 0 0 0;
-    height: 500px;
   }
   .s2-data {
     padding: 10px;
@@ -296,9 +267,8 @@ body {
   }
 }
 @media only screen and (min-width: 320px) {
-  .section-2{
-    height:1500px;
-  }
+ 
+
   .myPictureContainer > img {
     width: -webkit-fill-available;
   }
@@ -315,11 +285,11 @@ body {
   }
   .s2-content {
     margin: 40px 0 0 0;
-    height: 500px;
   }
   .s2-data {
     padding: 10px;
     text-transform: capitalize;
+    line-height: 45px;
   }
   .s2-data span:nth-child(4n - 2) {
     color: #999999;
@@ -351,6 +321,7 @@ body {
   }
 }
 @media only screen and (min-width: 768px) {
+ 
   .section-2 {
     display: flex;
     align-items: flex-start;
@@ -375,7 +346,6 @@ body {
   .myPictureContainer > .myPicture {
     margin-top: 15px;
     width: 345px;
-    height: 520px;
     object-fit: contain;
   }
   .s2-content {
