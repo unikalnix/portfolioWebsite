@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- mobile nav bar -->
+    <div class="mobile-nav-bar">
+        <div class="logo-container">
+            <img src="Screenshot__21_-removebg-preview.png" width="100px" alt="" title="daniyal_logo" />
+        </div>
+        <div class="menu-ul">
+            <a style="background: transparent; color: #fff; border: none" class="btn btn-primary"
+                data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Menu
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="cross-button-container" style="display: flex; align-items: center; justify-content: end">
+                    <button style="padding: 10px; background-color: #fff" type="button" class="btn-close"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-header">
+                    <div class="offcanvas-body p-0">
+                        <ul class="menu-list" style="list-style: none; padding: 0">
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#home">Home</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#about">About</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#resume">Resume</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#services">Services</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#projects">Projects</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tab nav bar -->
+    <div class="tab-nav-bar">
+        <div class="logo-and-menu">
+            <div class="logo-container">
+                <img src="Screenshot__21_-removebg-preview.png" width="100px" alt="" title="daniyal_logo" />
+            </div>
+            <ul class="menu-list">
+                <li class="menu-li"><a href="#home">Home</a></li>
+                <li class="menu-li"><a href="#about">About</a></li>
+                <li class="menu-li"><a href="#resume">Resume</a></li>
+                <li class="menu-li"><a href="#services">Services</a></li>
+                <li class="menu-li"><a href="#projects">Projects</a></li>
+                <li class="menu-li"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- landing page -->
+    <div class="landing-page" id="home">
+        <span class="text-span">
+            <span>hey! i am</span>
+            <br />
+            <span class="daniyal">daniyal shakeel</span>
+            <br />
+            <p id="intro-text">
+                I'm a
+                <span id="auto-typing-text"></span>
+            </p>
+        </span>
+    </div>
+    <!-- section 2 -->
+    <div id="about" style="width: 100%; height: 500px; background: green;"></div>
+</body>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    // Get the offcanvas element
+    var offcanvasExample = new bootstrap.Offcanvas(
+      document.getElementById("offcanvasExample")
+    );
+
+    // Get all links inside the offcanvas
+    var links = document.querySelectorAll("#offcanvasExample a");
+
+    // Function to handle smooth scrolling
+    function smoothScrollToTarget(targetElement) {
+      if (targetElement) {
+        // Determine if you are in tab or mobile mode
+        const isTabMode = window.innerWidth >= 768;
+
+        // Get the height of the fixed navigation bar
+        const navbarHeight = isTabMode
+          ? document.querySelector(".tab-nav-bar").offsetHeight
+          : document.querySelector(".mobile-nav-bar").offsetHeight;
+
+        window.scrollTo({
+          top: targetElement.offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+
+    // Add a click event listener to each link in mobile nav bar
+    links.forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Close the offcanvas when a link is clicked
+        offcanvasExample.hide();
+
+        // Scroll to the target section
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        smoothScrollToTarget(targetElement);
+      });
+    });
+
+    // Smooth scroll function for navigation links in the tab nav bar and mobile nav bar
+    const navbarLinks = document.querySelectorAll(".menu-li > a");
+
+    navbarLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        smoothScrollToTarget(targetElement);
+      });
+    });
+  
+  // Your additional JavaScript code can go here if you have any.
+
+  // auto typing text code
+  const textElement = document.getElementById("auto-typing-text");
+  const names = [
+    "Web Developer.    ",
+    "Web Designer.   ", // Your list of names
+    "Graphic Designer.   ",
+  ];
+  const typingSpeed = 200; // Adjust the typing speed (milliseconds per character)
+  const deleteSpeed = 50; // Adjust the delete speed (milliseconds per character)
+
+  let nameIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const name = names[nameIndex];
+
+    if (isDeleting) {
+      textElement.innerHTML = name.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        nameIndex = (nameIndex + 1) % names.length; // Move to the next name
+      }
+    } else {
+      textElement.innerHTML = name.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === name.length) {
+        isDeleting = true;
+      }
+
+      const speed = isDeleting ? deleteSpeed : typingSpeed;
+
+      setTimeout(type, speed);
+    }
+  }
+
+  window.onload = type; // Start the typing effect when the page loads
+});
+
+
+</script>
+
+</html>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body{
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #1b1b1a,
+    #2f2e2e,
+    #444443,
+    #5a5a59
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+/* nav bar responsive */
+@media only screen and (max-width: 320px) {
+  .tab-nav-bar {
+    display: none;
+  }
+
+  .menu-li {
+    position: relative;
+  }
+
+  .menu-li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    top: 25px;
+    left: 0;
+    transition: width 0.3s;
+  }
+.offcanvas{
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #1b1b1a,
+    #2f2e2e,
+    #444443,
+    #5a5a59
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+  .menu-li:hover::after {
+    width: 100%;
+  }
+  .mobile-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .tab-nav-bar {
+    display: none;
+  }
+
+  .menu-li {
+    position: relative;
+  }
+
+  .menu-li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    top: 25px;
+    left: 0;
+    transition: width 0.3s;
+  }
+  .offcanvas{
+    background-image: linear-gradient(
+      to right bottom,
+      #000000,
+      #1b1b1a,
+      #2f2e2e,
+      #444443,
+      #5a5a59
+    );
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .menu-li:hover::after {
+    width: 100%;
+  }
+  .mobile-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+
+  .mobile-nav-bar {
+    display: none;
+  }
+  .tab-nav-bar {
+    display: block !important;
+    position: sticky;
+    top: 0;
+    background-color: #000; /* Customize the background color */
+    z-index: 1000; 
+  }
+  .tab-nav-bar .logo-and-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Add padding for spacing */
+  }
+  .offcanvas{
+    background-image: linear-gradient(
+      to right bottom,
+      #000000,
+      #1b1b1a,
+      #2f2e2e,
+      #444443,
+      #5a5a59
+    );
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+  }
+  .menu-li > a {
+    color: white;
+    text-decoration: none;
+  }
+  .logo-and-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-list {
+    margin: 0;
+    padding-right: 30px;
+  }
+}
+/* landing page responsive*/
+@media only screen and (max-width:320px) {
+  .landing-page {
+    width: 100%;
+    height: 455px;
+    background-image: linear-gradient(
+      to right bottom,
+      #000000,
+      #1b1b1a,
+      #2f2e2e,
+      #444443,
+      #5a5a59
+    );
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-span {
+    color: white;
+    text-align: center;
+  }
+  .text-span > span {
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+  
+  .daniyal {
+    font-size: 42px !important;
+    text-transform: capitalize;
+  }
+  
+  #intro-text > span {
+    color: #ef961a;
+  }
+  
+}
+@media only screen and (min-width:320px) {
+  .landing-page {
+    width: 100%;
+    height: 455px;
+    background-image: linear-gradient(
+      to right bottom,
+      #000000,
+      #1b1b1a,
+      #2f2e2e,
+      #444443,
+      #5a5a59
+    );
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-span {
+    color: white;
+    text-align: center;
+  }
+  .text-span > span {
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+  
+  .daniyal {
+    font-size: 42px !important;
+    text-transform: capitalize;
+  }
+  
+  #intro-text > span {
+    color: #ef961a;
+  }
+  
+}
+</style>
+

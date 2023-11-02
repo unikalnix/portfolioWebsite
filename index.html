@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- link style css -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- mobile nav bar -->
+    <div class="mobile-nav-bar">
+        <div class="logo-container">
+            <img src="Screenshot__21_-removebg-preview.png" width="100px" alt="" title="daniyal_logo" />
+        </div>
+        <div class="menu-ul">
+            <a style="background: transparent; color: #fff; border: none" class="btn btn-primary"
+                data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Menu
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="cross-button-container" style="display: flex; align-items: center; justify-content: end">
+                    <button style="padding: 10px; background-color: #fff" type="button" class="btn-close"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-header">
+                    <div class="offcanvas-body p-0">
+                        <ul class="menu-list" style="list-style: none; padding: 0">
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#home">Home</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#about">About</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none" href="#resume">Resume</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#services">Services</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#projects">Projects</a>
+                            </li>
+                            <li style="padding: 10px">
+                                <a class="menu-li" style="color: #fff; text-decoration: none"
+                                    href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tab nav bar -->
+    <div class="tab-nav-bar">
+        <div class="logo-and-menu">
+            <div class="logo-container">
+                <img src="Screenshot__21_-removebg-preview.png" width="100px" alt="" title="daniyal_logo" />
+            </div>
+            <ul class="menu-list">
+                <li class="menu-li"><a href="#home">Home</a></li>
+                <li class="menu-li"><a href="#about">About</a></li>
+                <li class="menu-li"><a href="#resume">Resume</a></li>
+                <li class="menu-li"><a href="#services">Services</a></li>
+                <li class="menu-li"><a href="#projects">Projects</a></li>
+                <li class="menu-li"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- landing page -->
+    <div class="landing-page" id="home">
+        <span class="text-span">
+            <span>hey! i am</span>
+            <br />
+            <span class="daniyal">daniyal shakeel</span>
+            <br />
+            <p id="intro-text">
+                I'm a
+                <span id="auto-typing-text"></span>
+            </p>
+        </span>
+    </div>
+    <!-- section 2 -->
+    <div class="section-2">
+        <div class="myPictureContainer">
+            <img class="myPicture" src="myPicture.jpg" alt="" />
+        </div>
+        <div id="about" class="s2-content">
+            <h3>
+                about me
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero in fugit
+                neque. Recusandae quis, qui porro similique at modi dolores!
+            </p>
+            <div class="s2-data">
+                <span>name:
+                </span>
+                <span
+                    style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;daniyal
+                    shakeel</span>
+                <br />
+                <span>date of birth: </span>
+                <span style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22 Dec 2004</span>
+                <br />
+                <span>address:
+                </span>
+                <span
+                    style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;muhallah
+                    nizam pura</span>
+                <br />
+                <span style="color: white;">zip code:
+                </span>
+                <span
+                    style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50200</span>
+                <br />
+                <span>email:
+                </span>
+                <span
+                    style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hafizdaniyalshakeel@gmail.com</span>
+                <br />
+                <span>contact: </span>
+                <span
+                    style="color: #999999;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+92
+                    333 4410061</span>
+                <br />
+            </div>
+
+            <div class="s2-content--projects">
+                <span>120</span>
+                <span>projects completed</span>
+            </div>
+            <button class="s2-content--button">download
+                cV</button>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
