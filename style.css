@@ -296,6 +296,9 @@ body {
   }
 }
 @media only screen and (min-width: 320px) {
+  .section-2{
+    height:600px;
+  }
   .myPictureContainer > img {
     width: -webkit-fill-available;
   }
