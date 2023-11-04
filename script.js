@@ -112,11 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.onload = type; // Start the typing effect when the page loads
-});// Function to handle scrolling event and change background color with transition
+}); // Function to handle scrolling event and change background color with transition
 function handleScroll() {
   const scrollPosition = window.scrollY;
   const isTabMode = window.innerWidth >= 768;
-  const navbar = document.querySelector(isTabMode ? ".tab-nav-bar" : ".mobile-nav-bar");
+  const navbar = document.querySelector(
+    isTabMode ? ".tab-nav-bar" : ".mobile-nav-bar"
+  );
 
   if (scrollPosition === 0) {
     // When user scrolls to the top, make the navbar transparent with a smooth transition
@@ -128,6 +130,29 @@ function handleScroll() {
     navbar.style.backgroundColor = "black";
   }
 }
-
+// resume section scroll handler
 // Add a scroll event listener to track the user's scroll position
 window.addEventListener("scroll", handleScroll);
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const navigationLinks = document.querySelectorAll(".left-panel a");
+
+    navigationLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1); // Remove the # symbol
+        const targetSection = document.getElementById(targetId);
+        const navigationBarHeight = document.querySelector(".left-panel").offsetHeight;
+
+        if (targetSection) {
+          const targetOffset = targetSection.offsetTop - (navigationBarHeight - 400); // Adjust as needed
+          window.scrollTo({
+            top: targetOffset,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
+
