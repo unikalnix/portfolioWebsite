@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection{
+  background-color: #ef961a;
+  color: white;
+}
 html,
 body {
   scroll-behavior: smooth;
@@ -787,3 +791,280 @@ body {
   }
 }
 /* services section full responsive */
+/* feed css */
+@media only screen and (max-width:768px) {
+  .services{
+    padding: 20px;
+  }
+  .services--title{
+    color: #ef961a;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .services--description{
+    text-align: center;
+    max-width: 85%;
+    margin: auto;
+    line-height: 40px;
+    color: #999999;
+    margin-bottom: 50px;
+  }
+  .services--flex-1-and-2{
+    padding: 20px;
+  }
+  .services--flex-1, .services--flex-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .web-design, .web-development, .graphic-design, .layouts, .templates, .seo{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: background-color 0.3s;
+    box-shadow: 15px 15px 8.5px 6px #000;
+    transition: box-shadow 0.3s;
+  }
+  .web-design:hover, .web-development:hover, .graphic-design:hover, .layouts:hover, .templates:hover, .seo:hover{
+    background-color: #ef961a;
+    box-shadow: none;
+  }
+  .web-design--img-container, .web-development--img-container, .graphic-design--img-container, .layouts--img-container, .templates--img-container, .seo--img-container{
+    background-color: #ef961a;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .web-design--img-container > img, .web-development--img-container >img, .graphic-design--img-container > img, .layouts--img-container > img, .templates--img-container > img , .seo--img-container > img{
+    padding: 10px;
+  }
+  .web-design--title, .web-development--title, .graphic-design--title, .layouts--title, .templates--title, .seo--title{
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+  .web-design:hover .web-design--title, .web-development:hover .web-development--title, .graphic-design:hover .graphic-design--title,  .layouts:hover .layouts--title, .templates:hover .templates--title, .seo:hover .seo--title{
+    color: black;
+  }
+  .web-design--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 25px;
+    transition: background-color 0.3s;
+  }
+  .web-development--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 50px;
+    transition: background-color 0.3s;
+  }
+  .graphic-design--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 37px;
+    transition: background-color 0.3s;
+  }
+  .layouts--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 50px;
+    transition: background-color 0.3s;
+  }
+  .templates--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 58px;
+    transition: background-color 0.3s;
+  }
+  .seo--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 84px;
+    transition: background-color 0.3s;
+  }
+  .web-design:hover .web-design--title::after, .web-development:hover .web-development--title::after, .graphic-design:hover .graphic-design--title::after, .layouts:hover .layouts--title::after, .templates:hover .templates--title::after, .seo:hover .seo--title::after{
+    background-color:#000;
+  }
+  .web-design--description, .web-development--description, .graphic-design--description, .layouts--description, .templates--description, .seo--description{
+    text-align: center;
+    color: #999999;
+    transition: color 0.3s;
+  }
+  .web-design:hover .web-design--description, .web-development:hover .web-development--description, .graphic-design:hover .graphic-design--description, .layouts:hover .layouts--description,  .templates:hover .templates--description, .seo:hover .seo--description{
+    color: black;
+  }
+}
+@media only screen and (min-width:768px) {
+  .services{
+    padding: 20px;
+  }
+  .services--title{
+    color: #ef961a;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .services--description{
+    text-align: center;
+    max-width: 85%;
+    margin: auto;
+    line-height: 40px;
+    color: #999999;
+    margin-bottom: 50px;
+  }
+  .services--flex-1-and-2{
+    padding: 20px;
+  }
+  .services--flex-1, .services--flex-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .web-design, .web-development, .graphic-design, .layouts, .templates, .seo{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: background-color 0.3s;
+    box-shadow: 15px 15px 8.5px 6px #000;
+    transition: box-shadow 0.3s;
+  }
+  .web-design:hover, .web-development:hover, .graphic-design:hover, .layouts:hover, .templates:hover, .seo:hover{
+    background-color: #ef961a;
+    box-shadow: none;
+  }
+  .web-design--img-container, .web-development--img-container, .graphic-design--img-container, .layouts--img-container, .templates--img-container, .seo--img-container{
+    background-color: #ef961a;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .web-design--img-container > img, .web-development--img-container >img, .graphic-design--img-container > img, .layouts--img-container > img, .templates--img-container > img , .seo--img-container > img{
+    padding: 10px;
+  }
+  .web-design--title, .web-development--title, .graphic-design--title, .layouts--title, .templates--title, .seo--title{
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+  .web-design:hover .web-design--title, .web-development:hover .web-development--title, .graphic-design:hover .graphic-design--title,  .layouts:hover .layouts--title, .templates:hover .templates--title, .seo:hover .seo--title{
+    color: black;
+  }
+  .web-design--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 25px;
+    transition: background-color 0.3s;
+  }
+  .web-development--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 50px;
+    transition: background-color 0.3s;
+  }
+  .graphic-design--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 37px;
+    transition: background-color 0.3s;
+  }
+  .layouts--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 50px;
+    transition: background-color 0.3s;
+  }
+  .templates--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 58px;
+    transition: background-color 0.3s;
+  }
+  .seo--title::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    top: 32px;
+    left: 84px;
+    transition: background-color 0.3s;
+  }
+  .web-design:hover .web-design--title::after, .web-development:hover .web-development--title::after, .graphic-design:hover .graphic-design--title::after, .layouts:hover .layouts--title::after, .templates:hover .templates--title::after, .seo:hover .seo--title::after{
+    background-color:#000;
+  }
+  .web-design--description, .web-development--description, .graphic-design--description, .layouts--description, .templates--description, .seo--description{
+    text-align: center;
+    color: #999999;
+    transition: color 0.3s;
+  }
+  .web-design:hover .web-design--description, .web-development:hover .web-development--description, .graphic-design:hover .graphic-design--description, .layouts:hover .layouts--description,  .templates:hover .templates--description, .seo:hover .seo--description{
+    color: black;
+  }
+}
+/* changing */
+@media only screen and (max-width:768px) {
+  .services--description{
+    max-width: 100%;
+  }
+  .services--flex-1, .services--flex-2{
+    flex-wrap: wrap;
+  }
+
+}
