@@ -1648,13 +1648,22 @@ body {
 }
 @media only screen and (max-width:425px){
   input[type = "text"]{
-    padding-right: 65px;
+    padding-right: 35px;
   }
   textarea{
-    padding: 15px;
+    padding: 0px;
+  }
+  .content--button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .content--button-container > button{
-    width: 113%;
+    width: 200px;
+  }
+  .img-and-content--img-container >img{
+    width: 200px;
   }
 }
 /* footer */
