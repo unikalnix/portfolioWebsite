@@ -1646,6 +1646,17 @@ body {
     padding-top: 26px;
   }
 }
+@media only screen and (max-width:425px){
+  input[type = "text"]{
+    padding-right: 65px;
+  }
+  textarea{
+    padding: 15px;
+  }
+  .content--button-container > button{
+    width: 113%;
+  }
+}
 /* footer */
 /* feed css */
 @media only screen and (max-width:1024px) {
