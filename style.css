@@ -24,6 +24,29 @@ body {
   background-size: auto;
   color: white;
 }
+#scroll-to-bottom-button {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color:#ef961a;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  padding: 20px 25px;
+  cursor: pointer;
+  animation: scrollToBottomButton 1s linear infinite;
+}
+@keyframes scrollToBottomButton {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
 /* nav bar responsive */
 /* feed css */
 @media only screen and (max-width: 320px) {
@@ -1520,7 +1543,7 @@ body {
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width:1230px) and (min-width:768) {
+@media only screen and (max-width:1230px) and (min-width:768px) {
   .contact--flex{
     flex-wrap: wrap;
   }
