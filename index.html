@@ -643,4 +643,39 @@
 
 <script src="script.js"></script>
 
+<!-- Include ScrollReveal library (from a CDN) -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+  // Initialize ScrollReveal
+  const sr = ScrollReveal({
+    reset: false,
+    duration: 2500,
+    distance: "60px",
+  });
+
+  // Configure the reveal animations for your elements with zero delay
+  sr.reveal(".text-span", { delay: 0, origin: "bottom" });
+  sr.reveal(".s2-content", { delay: 0, origin: "bottom" });
+  sr.reveal(".education--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".education--logo-and-content", { delay: 0, origin: "bottom" });
+  sr.reveal(".experience--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".experience--logo-and-content", { delay: 0, origin: "bottom" });
+  sr.reveal(".skills--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".html-css-js .container-html, .html-css-js .container-css, .html-css-js .container-js  ", { delay: 0, origin: "bottom", interval:200 });
+  sr.reveal(".awards--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".awards--logo-and-content", { delay: 0, origin: "bottom" });
+  sr.reveal(".services--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".services--description", { delay: 0, origin: "bottom" });
+  sr.reveal(".services--flex-1 .web-design, .services--flex-1 .web-development, .services--flex-1 .graphic-design ", { delay: 0, origin: "bottom", interval:200 });
+  sr.reveal(".services--flex-2 .layouts, .services--flex-2 .templates, .services--flex-2 .seo ", { delay: 0, origin: "bottom", interval:200 });
+  sr.reveal(".projects--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".projects--description", { delay: 0, origin: "bottom" });
+  sr.reveal(".projects--flex-1 a:nth-child(1), .projects--flex-1 a:nth-child(2), .projects--flex-1 a:nth-child(3)", { delay: 0, origin: "bottom", interval:200 });
+  sr.reveal(".contact--title", { delay: 0, origin: "bottom" });
+  sr.reveal(".contact--description", { delay: 0, origin: "bottom" });
+  sr.reveal(".contact--flex .address, .contact--flex .phone, .contact--flex .email, .contact--flex .website", { delay: 0, origin: "bottom", interval:200 });
+
+</script>
+
 </html>
