@@ -234,7 +234,7 @@ function jsCode() {
           });
         } else {
           // Calculate the scroll target position with an offset of the nav bar height
-          const targetOffset = footerSection.offsetTop + 400;
+          const targetOffset = footerSection.offsetTop + 1000;
   
           // Scroll to the footer section with the adjusted offset
           window.scrollTo({
