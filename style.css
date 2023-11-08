@@ -36,6 +36,7 @@ body {
   cursor: pointer;
   animation: scrollToBottomButton 1s linear infinite;
 }
+
 @keyframes scrollToBottomButton {
   0% {
       transform: translateY(0);
