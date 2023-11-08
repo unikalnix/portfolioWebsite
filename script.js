@@ -198,51 +198,53 @@ function jsCode() {
     });
   });
 
-  // scroll to bottom button
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollToBottomButton = document.getElementById(
-      "scroll-to-bottom-button"
-    );
-    const footerSection = document.querySelector(".footer");
-    const navBarHeight = document.querySelector(".mobile-nav-bar").offsetHeight;
-
-    // Function to toggle the icon class based on scroll position
-    function toggleIconClass() {
-      const iconElement = scrollToBottomButton.querySelector("i");
-      if (window.scrollY > footerSection.offsetTop - navBarHeight) {
-        iconElement.classList.remove("fa-chevron-down");
-        iconElement.classList.add("fa-chevron-up");
-      } else {
-        iconElement.classList.remove("fa-chevron-up");
-        iconElement.classList.add("fa-chevron-down");
+    // scroll to bottom button
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToBottomButton = document.getElementById(
+        "scroll-to-bottom-button"
+      );
+      const footerSection = document.querySelector(".footer");
+      const navBarHeight = document.querySelector(".mobile-nav-bar").offsetHeight;
+  
+      // Function to toggle the icon class based on scroll position
+      function toggleIconClass() {
+        const iconElement = scrollToBottomButton.querySelector("i");
+        if (window.scrollY > footerSection.offsetTop - navBarHeight) {
+          iconElement.classList.remove("fa-chevron-down");
+          iconElement.classList.add("fa-chevron-up");
+        } else {
+          iconElement.classList.remove("fa-chevron-up");
+          iconElement.classList.add("fa-chevron-down");
+        }
       }
-    }
-
-    // Add a scroll event listener to the window
-    window.addEventListener("scroll", toggleIconClass);
-
-    // Initial icon setup
-    toggleIconClass();
-
-    // Add a click event listener to the button
-    scrollToBottomButton.addEventListener("click", function () {
-      if (window.scrollY > footerSection.offsetTop - navBarHeight) {
-        // Scroll back to the top of the webpage
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      } else {
-        // Calculate the scroll target position with an offset of the nav bar height
-        const targetOffset = footerSection.offsetTop - navBarHeight;
-
-        // Scroll to the footer section with the adjusted offset
-        window.scrollTo({
-          top: targetOffset,
-          behavior: "smooth",
-        });
-      }
+  
+      // Add a scroll event listener to the window
+      window.addEventListener("scroll", toggleIconClass);
+  
+      // Initial icon setup
+      toggleIconClass();
+  
+      // Add a click event listener to the button
+      scrollToBottomButton.addEventListener("click", function () {
+        if (window.scrollY > footerSection.offsetTop - navBarHeight) {
+          // Scroll back to the top of the webpage
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        } else {
+          // Calculate the scroll target position with an offset of the nav bar height
+          const targetOffset = footerSection.offsetTop + 400;
+  
+          // Scroll to the footer section with the adjusted offset
+          window.scrollTo({
+            top: targetOffset,
+            behavior: "smooth",
+          });
+        }
+      });
     });
-  });
 }
+
+
 jsCode();
