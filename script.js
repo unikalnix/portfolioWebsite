@@ -177,24 +177,47 @@ function jsCode() {
       }
     });
   });
-    // JavaScript to scroll to the corresponding section with an offset (footer services links)
-    const servicesLinks = document.querySelectorAll('.footer--services a');
-    const footerServicesBarHeight = document.querySelector('.footer--services').offsetHeight;
-  
-    servicesLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-  
-            if (targetSection) {
-                const targetOffset = targetSection.offsetTop - 100;
-                window.scrollTo({
-                    top: targetOffset,
-                    behavior: 'smooth'
-                });
-            }
+  // JavaScript to scroll to the corresponding section with an offset (footer services links)
+  const servicesLinks = document.querySelectorAll(".footer--services a");
+  const footerServicesBarHeight =
+    document.querySelector(".footer--services").offsetHeight;
+
+  servicesLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        const targetOffset = targetSection.offsetTop - 100;
+        window.scrollTo({
+          top: targetOffset,
+          behavior: "smooth",
         });
+      }
     });
+  });
+
+  // scroll to bottom button
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollToBottomButton = document.getElementById(
+      "scroll-to-bottom-button"
+    );
+    const footerSection = document.querySelector(".footer");
+    const navBarHeight = document.querySelector(".mobile-nav-bar").offsetHeight;
+
+    // Add a click event listener to the button
+    scrollToBottomButton.addEventListener("click", function () {
+      // Calculate the scroll target position with an offset of the nav bar height
+      const targetOffset = footerSection.offsetTop - navBarHeight;
+
+      // Scroll to the footer section with the adjusted offset
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
+    });
+  });
 }
 jsCode();
